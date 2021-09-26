@@ -27,7 +27,7 @@ public class User {
     private long profileId;
 
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "Service",
+    @JoinTable(name = "service",
                 joinColumns = @JoinColumn(name = "user_id"),
                 inverseJoinColumns = @JoinColumn(name = "service_id")
     )

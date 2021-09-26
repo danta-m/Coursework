@@ -2,7 +2,6 @@ package com.RoleGame.entity;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.ValueGenerationType;
 
 import javax.persistence.*;
 
@@ -14,6 +13,8 @@ import javax.persistence.*;
 public class UserRole {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column (name = "id")
+    private long id;
 
     @Column (name = "role_name")
     private String roleName;
